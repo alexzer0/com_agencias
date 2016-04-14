@@ -15,7 +15,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class agenciasViewagencias extends JViewLegacy
+class agenciasView extends JViewLegacy
 {
 	/**
 	 * Display the Hello World view
