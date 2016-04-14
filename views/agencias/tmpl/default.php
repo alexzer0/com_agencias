@@ -4,7 +4,7 @@
 
 <caption>
 
-Entrar a P&Aacute;gina de Agencia Mayoristas
+Entrar a Página de Agencia Mayoristas
 
 </caption>
 
@@ -20,11 +20,11 @@ Entrar a P&Aacute;gina de Agencia Mayoristas
 
 				 echo "<div class='msgError'>
 
-				 Usuario y/o Contrase�a incorrecto, debe registrarse para acceder al sistema.
+				 Usuario y/o Contraseña incorrecto, debe registrarse para acceder al sistema.
 
 				 </center>"; 
 
-			}
+			} 
 
 		}
 
@@ -36,21 +36,21 @@ Entrar a P&Aacute;gina de Agencia Mayoristas
 
 		<td>Usuario:</td>
 
-	  <td><img src="user.jpg" title="Usuario" />&nbsp;<input type="text" name="user" id="inputtext" />&nbsp;</td>		
+	  <td><input type="text" name="user" id="inputtext" />&nbsp;</td>		
 
 	</tr>
 
 	<tr>
 
-		<td>Contrase�a:</td>
+		<td>Contraseña:</td>
 
-		<td><img src="pass.jpg" title="Contrase�a" />&nbsp;<input type="password" name="pass" id="inputtext" />&nbsp;</td>
+		<td><input type="password" name="pass" id="inputtext" />&nbsp;</td>
 
 	</tr>
 
 	<tr>
 
-		<td colspan="2" align="right"><input type="submit" value="Entrar �" id="inputbuton" /></td>
+		<td colspan="2" align="right"><input type="submit" value="Entrar " id="inputbuton" /></td>
 
 	</tr>
 
@@ -58,7 +58,7 @@ Entrar a P&Aacute;gina de Agencia Mayoristas
 
 		<td colspan="2" align="center" bgcolor="#D3E7CF">
 
-		<strong>Si su agencia no esta registrada Solicite su Acceso �</strong><br /><br />
+		<strong>Si su agencia no esta registrada Solicite su Acceso </strong><br /><br />
 
 		<a href="newpass.php"><img src="btnIngresar.jpg" border="0" /></a>
 
