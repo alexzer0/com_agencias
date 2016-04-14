@@ -15,6 +15,6 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class agenciasController extends JControllerLegacy
+class AgenciasController extends JControllerLegacy
 {
 }
