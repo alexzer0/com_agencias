@@ -17,6 +17,24 @@ require_once JPATH_COMPONENT . '/helpers/login.php';  //<-- this is our missing 
 // Perform the Request task
 $input = JFactory::getApplication()->input;
 $controller->execute($input->getCmd('task'));
+// Include the login functions only once
+require_once __DIR__ . '/helper.php';
+
+$params->def('greeting', 1);
+
+$type	          = ModLoginHelper::getType();
+$return	          = ModLoginHelper::getReturnUrl($params, $type);
+$twofactormethods = ModLoginHelper::getTwoFactorMethods();
+$user	          = JFactory::getUser();
+$layout           = $params->get('layout', 'default');
+
+// Logged users must load the logout sublayout
+if (!$user->guest)
+{
+	$layout .= '_logout';
+}
+
+require JModuleHelper::getLayoutPath('mod_login', $layout);
 
 // Redirect if set by the controller
 $controller->redirect();
