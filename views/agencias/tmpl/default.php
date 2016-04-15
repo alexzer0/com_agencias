@@ -1,6 +1,6 @@
 <div class="row">
 <div class="span4">
-    <?php
+  <?php
 /**
  * @package     Joomla.Site
  * @subpackage  mod_login
@@ -10,28 +10,14 @@
  */
 
 defined('_JEXEC') or die;
-require_once __DIR__ . '/helper.php';
 
-$params->def('greeting', 1);
-
-$type             = ModLoginHelper::getType();
-$return           = ModLoginHelper::getReturnUrl($params, $type);
-$twofactormethods = ModLoginHelper::getTwoFactorMethods();
-$user             = JFactory::getUser();
-$layout           = $params->get('layout', 'default');
-
-// Logged users must load the logout sublayout
-if (!$user->guest)
-{
-        $layout .= '_logout';
-}else{
 require_once JPATH_SITE . '/components/com_users/helpers/route.php';
 
 JHtml::_('behavior.keepalive');
 JHtml::_('bootstrap.tooltip');
 
 ?>
-    <form action="<?php echo JRoute::_(htmlspecialchars(JUri::getInstance()->toString()), true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-inline">
+<form action="<?php echo JRoute::_(htmlspecialchars(JUri::getInstance()->toString()), true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-inline">
         <?php if ($params->get('pretext')) : ?>
                 <div class="pretext">
                         <p><?php echo $params->get('pretext'); ?></p>
@@ -138,8 +124,6 @@ JHtml::_('bootstrap.tooltip');
                 </div>
         <?php endif; ?>
 </form>
-    
 </div>
 <div class="span8">...column B.... </div>
 </div>
-<?php }?>
