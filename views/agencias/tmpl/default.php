@@ -11,24 +11,7 @@ Entrar a Página de Agencia Mayoristas
 	<tr class="odd">
 
 		<td colspan="2">
-
-		<?php
-
-		if(isset($_GET['error'])){
-
-			if ($_GET['error']==1) { 
-
-				 echo "<div class='msgError'>
-
-				 Usuario y/o Contraseña incorrecto, debe registrarse para acceder al sistema.
-
-				 </center>"; 
-
-			} 
-
-		}
-
-		?></td>
+</td>
 
 	</tr>
 
@@ -60,7 +43,7 @@ Entrar a Página de Agencia Mayoristas
 
 		<strong>Si su agencia no esta registrada Solicite su Acceso </strong><br /><br />
 
-		<a href="newpass.php"><img src="btnIngresar.jpg" border="0" /></a>
+		<a href="newpass.php"></a>
 
 		</td>
 
