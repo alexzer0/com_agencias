@@ -10,7 +10,21 @@
  */
 
 defined('_JEXEC') or die;
+require_once __DIR__ . '/helper.php';
 
+$params->def('greeting', 1);
+
+$type             = ModLoginHelper::getType();
+$return           = ModLoginHelper::getReturnUrl($params, $type);
+$twofactormethods = ModLoginHelper::getTwoFactorMethods();
+$user             = JFactory::getUser();
+$layout           = $params->get('layout', 'default');
+
+// Logged users must load the logout sublayout
+if (!$user->guest)
+{
+        $layout .= '_logout';
+}else{
 require_once JPATH_SITE . '/components/com_users/helpers/route.php';
 
 JHtml::_('behavior.keepalive');
@@ -128,3 +142,4 @@ JHtml::_('bootstrap.tooltip');
 </div>
 <div class="span8">...column B.... </div>
 </div>
+<?php }?>
